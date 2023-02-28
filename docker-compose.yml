@@ -1,0 +1,12 @@
+# export DOCKER_BUILDKIT=0 && docker-compose build --no-cache &> logs.txt
+# export DOCKER_BUILDKIT=0 && docker-compose up --build &> logs.txt
+version: '3.9'
+services:
+  vanilla-builder:
+    build:
+      dockerfile: Dockerfile
+    image: vanilla-forums/builder
+    volumes:
+      - './output:/root/output'
+      - '/home/andy/.composer/cache:/root/.composer/cache'
+      - '/home/andy/.cache/yarn/v6:/usr/local/share/.cache/yarn/v6'
