@@ -1,5 +1,7 @@
 #!/bin/sh
 rm -rf /root/output/*
+rm -rf ./20*
+rm -rf ./vanilla*
 curl -s https://api.github.com/repos/vanilla/vanilla/releases/latest \
 		| grep "zipball_url.*," \
 		| cut -d : -f 2,3 \
@@ -31,3 +33,7 @@ cp environment.php /root/output
 cp index.php /root/output
 cp preload.php /root/output
 cp version.json /root/output
+
+tar -zcvf vanilla-forums.tar.gz /root/output/
+mv vanilla-forums.tar.gz /root/output
+
