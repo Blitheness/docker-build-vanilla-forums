@@ -9,7 +9,6 @@ curl -s https://api.github.com/repos/vanilla/vanilla/releases/latest \
 		| xargs wget
 unzip -q $(ls .|head -n 1)
 cd $(ls|sort -r|head -n 1)
-composer require --no-update moontoast/math
 composer install --prefer-dist
 
 cp -r addons /root/output
