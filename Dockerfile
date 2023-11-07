@@ -24,7 +24,7 @@ RUN apk add --no-cache \
 		php7-tokenizer \
 		php7-xml php7-xmlwriter \
 	&& curl -sS https://getcomposer.org/installer \
-		| php -- --install-dir=/usr/local/bin --filename=composer --version=1.10.26
+		| php -- --install-dir=/usr/local/bin --filename=composer --version=2.6.5
 
 COPY get-and-build-vanilla.sh /usr/local/bin/get-and-build-vanilla
 RUN chmod +x /usr/local/bin/get-and-build-vanilla
