@@ -20,7 +20,7 @@ RUN apk add --no-cache \
 		php81-mbstring \
 		php81-openssl \
 		php81-pdo php81-phar \
-		php81-simplexml \
+		php81-simplexml php81-sockets \
 		php81-tokenizer \
 		php81-xml php81-xmlwriter \
 	&& curl -sS https://getcomposer.org/installer \
